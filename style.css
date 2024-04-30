@@ -1,0 +1,32 @@
+body{
+    margin: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 70vh;
+    border: 1px solid black;
+}
+
+.square{
+    width: calc(50vw / 16);
+    height: calc(70vh/ 16);
+}
+
+#resetButton{
+    margin-bottom: 10px;
+    padding: 4px 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: aqua;
+}
