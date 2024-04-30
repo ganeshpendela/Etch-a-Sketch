@@ -1,6 +1,16 @@
 const container = document.getElementById('container');
 const resetButton = document.getElementById('resetButton');
 
+
+//Function to generate random RGB color
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 // Function to create grid
 function createGrid(numSquaresPerSide) {
     // Clear existing grid
@@ -19,13 +29,20 @@ function createGrid(numSquaresPerSide) {
         container.appendChild(square);
 
         square.addEventListener('mouseenter', ()=>{
-            square.style.backgroundColor = "black";
+            handleMouseEnter(square);
         });
 
         square.addEventListener('mouseleave', ()=>{
             square.style.backgroundColor = "white";
         })
     }
+}
+
+
+//Function to handle mouse Enter
+function handleMouseEnter(square){
+    const newColor = getRandomColor();
+    square.style.backgroundColor = newColor;
 }
 
 // Event listener for button click
